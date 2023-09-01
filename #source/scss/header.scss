@@ -1,0 +1,156 @@
+.header {
+	position: absolute;
+	width: 100%;
+	top: 35px;
+	z-index: 50;
+
+
+		&__row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 85px;
+		}
+
+		&__logo {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 0)
+		}
+
+		&__menu {}
+}
+
+
+
+.menu {
+	display: flex;
+
+
+		&__burger {
+			display: none;
+		}
+
+		&__body {}
+
+		&__list {
+			display: flex;
+			
+			& li{
+				padding: 0 17.5px;
+
+				&:nth-child(2){
+					padding: 0 110px 0 17.5px;
+
+				}
+				&:nth-child(3){
+					padding: 0 17.5px 0 110px;
+				}
+			}
+		}
+
+		&__item {
+				font-size: 13px;
+				font-family: "Lato";
+				color: rgb(77, 73, 89);
+				font-weight: bold;
+				text-transform: uppercase;		  
+
+		}
+}
+
+@media(max-width: 700px){
+	
+	.header__logo {
+		left: 10%;
+		transform: translate(0, 0)
+	}
+	.menu{
+
+		&__burger {
+			display: block;
+			position: absolute;
+			top: 30px;
+			right: 10%;
+			width: 30px;
+			height: 20px;
+
+			&:before,
+			&:after{
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 30px;
+				height: 2px;
+				background-color: rgb(33, 31, 39);
+				transition: all 0.5s ease 0s;
+			}
+			&:before{
+				bottom: 0;
+			}
+
+			& span{
+				position: absolute;
+				top: 9px;
+				width: 100%;
+				height: 2px;
+				background-color: rgb(33, 31, 39);
+			}
+
+			
+		}
+	
+	&__body{
+				position: fixed;
+				top: -100%;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgb(77, 73, 89);
+				z-index: -1;
+				transition: all 0.5s ease 0s;
+		}
+
+		&__item {
+			color: rgb(255, 255, 255);	 
+			font-size: 23px; 
+			
+
+		}	
+		&__list{
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			padding-top: 150px;
+			& li{
+				padding: 30px 0;
+
+				&:nth-child(2){
+					padding:  30px 0;
+
+				}
+				&:nth-child(3){
+					padding:  30px 0;
+				}
+			}
+		}
+	}
+
+	.menu__body.active{
+        top: 0;
+    }
+    .menu__burger.active::before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+    .menu__burger.active::after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+    .menu__burger.active span{
+        transform: scale(0);
+    }
+}
+

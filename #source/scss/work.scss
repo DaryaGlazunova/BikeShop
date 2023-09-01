@@ -1,0 +1,93 @@
+.work {
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.bike {
+    display: flex;
+    &_r {
+        flex-direction: row-reverse;
+    }
+
+    &__column {
+        flex: 0 1 33.3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_big {
+            flex: 1 0 66.6%;
+        }
+    }
+
+    &__link {}
+
+    &__about {
+        margin: 70px 68px 95px 67px;
+        text-align: center;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -40px;left: calc(50% - 25px) ;
+            height: 1px;
+            width: 50px;
+            background-color: #353738;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 31px;
+    }
+
+    &__title {
+        margin-bottom: 26px;
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 3.6px;
+        color: #353738;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 1.88;
+        text-align: justify;
+        color: #848789;
+    }
+
+    &__img {
+        position: relative;
+        padding: 0 0 38% 0;
+        & img{
+            display: block;
+            position: absolute;
+            top: 0;left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.link {
+display: block;
+position: relative;
+height: 100%;
+    &__logo {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       z-index: 10;
+       transform: translate(-50%, 0)
+    }
+
+    &__img {
+   position: absolute;
+   top: 0;left: 0;
+   width: 100%;
+   height: 100%;
+    }
+}
+

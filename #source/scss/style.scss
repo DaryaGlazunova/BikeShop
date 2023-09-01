@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&display=swap');
+
+@import "nullstyle.scss";
+@import "ibg.scss";
+.wrapper {
+    overflow: hidden;
+    height: 100%;
+   
+}
+
+
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.main-screen {
+    flex: 1 0 100%;
+    position: relative;
+		&_bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+}
+
+.content {
+
+}
+
+
+
+@import "header.scss";
+@import "about-us.scss";
+@import "work.scss";
+@import "twitter.scss";
+@import "shop.scss";

@@ -1,0 +1,29 @@
+.about-us {
+	background-color: #f7f7f7;
+	
+		&__content {
+			padding: 117px 0 142px 0;
+			max-width: 1079px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		&__img {
+			margin-bottom: 34px;
+		}
+
+		&__title {
+			margin-bottom: 35px;
+			font-family: Lato;
+			font-size: 18px;
+			font-weight: bold;
+			letter-spacing: 3.6px;
+			color: #353738;
+		}
+
+		&__text {
+			font-family: Lato;
+			font-size: 18px;
+			line-height: 1.89;
+			color: #848789;
+		}
+}
